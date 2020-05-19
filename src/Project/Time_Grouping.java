@@ -101,6 +101,7 @@ public class Time_Grouping
             wait[k]=min;
             //System.out.println(min+" "+k+" "+list.get(0).getCloudletId()+" "+time_vm_list.get(k).getMips());
             list.remove(0);
+            VM_creater.setCur();
         }
         //System.out.println();
     }

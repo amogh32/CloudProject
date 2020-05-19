@@ -11,7 +11,7 @@ public class Algorithms
     public Algorithms()
     {
         algos.add("Paper");
-        
+
         size=algos.size();
     }
 

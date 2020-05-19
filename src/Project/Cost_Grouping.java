@@ -86,13 +86,14 @@ public class Cost_Grouping
                     min=t;
                     k=j;
                 }
-                System.out.print(t+" ");
+                //System.out.print(t+" ");
             }
             //System.out.println();
             output_cloudlet.add(list.get(0));
             output_vm.add(cost_vm_list.get(k).getId());
             list.remove(0);
-            System.out.println(min);
+            VM_creater.setCur();
+            //System.out.println(min);
             cost+=min;
         }
         //System.out.println();

@@ -74,6 +74,7 @@ public class Paper_algo
             printCloudletList(newList);
 
             System.out.println("Paper Algorithm finished!");
+            VM_creater.reset();
         }
         catch (Exception e)
         {

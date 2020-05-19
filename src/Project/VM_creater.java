@@ -51,6 +51,13 @@ public class VM_creater
         return a;
     }
 
+    public static void reset()
+    {
+        cur=1;
+        m=0;
+        setm();
+    }
+
     public static void setCur()
     {
         int i,j;

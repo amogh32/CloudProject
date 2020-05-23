@@ -18,6 +18,8 @@ public class PaperBroker extends DatacenterBroker
 
     private double cost=0;
 
+    private double[] wait;
+
     public PaperBroker(String name) throws Exception
     {
         super(name);
@@ -54,6 +56,7 @@ public class PaperBroker extends DatacenterBroker
         {
             time_cloudlet_list.add(original_list.get(i));
         }
+        wait=new double[j];
         for(i=j;i<num_cloudlet;i++)
         {
             cost_cloudlet_list.add(original_list.get(i));
@@ -66,7 +69,7 @@ public class PaperBroker extends DatacenterBroker
         {
             cost_vm_list.add(vmList.get(i));
         }
-        Time_Grouping time =new Time_Grouping(time_cloudlet_list,time_vm_list);
+        Time_Grouping time =new Time_Grouping(time_cloudlet_list,time_vm_list,wait);
         Cost_Grouping cost1=new Cost_Grouping(cost_cloudlet_list,cost_vm_list);
         ArrayList<Cloudlet> timecl=time.getOutput_cloudlet();
         ArrayList<Integer>timevm=time.getOutput_vm();

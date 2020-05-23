@@ -20,13 +20,13 @@ public class Time_Grouping
     private double[] wait;
     private double cost;
 
-    public Time_Grouping(ArrayList<Cloudlet> time_cloudlet_list, ArrayList<Vm> time_vm_list)
+    public Time_Grouping(ArrayList<Cloudlet> time_cloudlet_list, ArrayList<Vm> time_vm_list,double[] wait)
     {
         this.time_cloudlet_list=time_cloudlet_list;
         this.time_vm_list=time_vm_list;
         cloudlet_count=time_cloudlet_list.size();
         vm_count=time_vm_list.size();
-        wait=new double[vm_count];
+        this.wait=wait;
         cost=0;
         schedule();
     }
